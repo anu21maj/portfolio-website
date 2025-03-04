@@ -166,4 +166,19 @@ footer .footer-rights{
     color: gray;
     padding: 12px 0;
 }
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.dark-mode nav {
+    background-color: rgb(20, 20, 20);
+}
+
+.dark-mode .btn {
+    background-color: white;
+    color: black;
+}
+
 
