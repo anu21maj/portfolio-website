@@ -17,26 +17,32 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
     });
 });
 
-// Dark Mode Toggle
-const darkModeButton = document.getElementById("darkModeToggle");
+const toggleButton = document.getElementById("dark-mode-toggle");
 const body = document.body;
+const navbar = document.querySelector("nav");
 
-darkModeButton.addEventListener("click", () => {
-    body.classList.toggle("dark-mode");
-});
-
-// Store dark mode preference in localStorage
-if (localStorage.getItem("darkMode") === "enabled") {
-    body.classList.add("dark-mode");
-}
-
-darkModeButton.addEventListener("click", () => {
+// Function to toggle between light and dark mode
+toggleButton.addEventListener("click", () => {
     if (body.classList.contains("dark-mode")) {
-        localStorage.setItem("darkMode", "enabled");
+        body.classList.remove("dark-mode");
+        body.classList.add("light-mode");
+        localStorage.setItem("theme", "light");
     } else {
-        localStorage.setItem("darkMode", "disabled");
+        body.classList.remove("light-mode");
+        body.classList.add("dark-mode");
+        localStorage.setItem("theme", "dark");
     }
 });
+
+// Apply stored theme on page load
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme === "dark") {
+    body.classList.add("dark-mode");
+} else {
+    body.classList.add("light-mode");
+}
+
+
 
 
 
