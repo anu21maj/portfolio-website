@@ -166,19 +166,86 @@ footer .footer-rights{
     color: gray;
     padding: 12px 0;
 }
-/* Dark Mode Styles */
-.dark-mode {
+#dark-mode-toggle {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 20px;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+#dark-mode-toggle:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Align the button with navigation links */
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+nav ul li button {
+    margin-left: 10px; /* Space between Contact Me and Dark Mode button */
+}
+/* Default Light Mode (Normal) */
+body {
+    background-color: white;
+    color: black;
+}
+
+nav {
+    background-color: rgb(209, 179, 255); /* Light purple navbar */
+}
+
+.leftSection .btn {
+    background-color: #f0f0f0;
+    color: black;
+    border: 2px solid black;
+}
+
+.secondSection .box {
     background-color: black;
+}
+
+.secondSection .vertical {
+    background-color: black;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: rgb(0, 0, 33);
     color: white;
 }
 
 .dark-mode nav {
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(69, 69, 153);
 }
 
-.dark-mode .btn {
-    background-color: white;
-    color: black;
+.dark-mode .leftSection .btn {
+    background-color: #000121;
+    color: white;
+    border: 2px solid white;
 }
+
+.dark-mode .secondSection .box {
+    background-color: white;
+}
+
+.dark-mode .secondSection .vertical {
+    background-color: white;
+}
+
+
+
 
 
